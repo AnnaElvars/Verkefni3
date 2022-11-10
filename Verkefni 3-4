@@ -1,0 +1,19 @@
+import 'dart:io';
+import 'dart:convert';
+import 'dart:core';
+
+void main() {
+  print ('Insert a number');
+  String inputNum = stdin.readLineSync(encoding: Encoding.getByName("UTF-8"));
+  var num = int.tryParse(inputNum);
+  var count = 0;
+
+  do {
+    if(num > 0) {
+      count ++;
+      num = num~/10;
+    }
+  } while (num > 0 || num != 0);
+
+  print(count);
+}
