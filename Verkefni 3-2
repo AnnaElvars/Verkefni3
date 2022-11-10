@@ -1,0 +1,11 @@
+void main() {
+  print ('Insert any number between 1-10 for multiplication:');
+  String inputNum = stdin.readLineSync(encoding: Encoding.getByName("UTF-8"));
+  var num = int.tryParse(inputNum);
+
+  for (int i = 1; i <11; i++) {
+    var sum = 0;
+    sum = num * i;
+    print("$num * $i = $sum");
+  }
+}
