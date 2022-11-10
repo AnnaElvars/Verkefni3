@@ -1,0 +1,29 @@
+import 'dart:core';
+import 'dart:math';
+
+void main() {
+  Random r = new Random();
+  int randomNumber = 0;
+  int index = 0;
+  var chosenNumbers = [];
+
+  //Getting 5 random numbers
+  do {
+    randomNumber = r.nextInt(10);
+    index ++;
+    chosenNumbers.add(randomNumber);
+  } while (randomNumber != 10 && index < 5);
+
+  //Finding sum
+  int sum = 0;
+
+  for (var number in chosenNumbers) {
+    sum += number;
+  }
+
+  //Finding average
+  var average = sum/chosenNumbers.length;
+
+  print(sum);
+  print(average);
+}
